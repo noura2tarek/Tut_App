@@ -1,11 +1,10 @@
-import 'dart:ui';
-
+import 'package:flutter/material.dart';
 import 'fonts_manager.dart';
 
 //private style method
-TextStyle _getTextStyle(
-  double fontSize,
-  FontWeight fontWeight,
+TextStyle? _getTextStyle(
+  double? fontSize,
+  FontWeight? fontWeight,
   Color? color,
   double? height,
 ) {
@@ -19,7 +18,7 @@ TextStyle _getTextStyle(
 }
 
 //light Style
-TextStyle? getLightStyle({double fontSize = FontSize.s12, Color? color, double? height}) {
+TextStyle? getLightStyle({double? fontSize = FontSize.s12, Color? color, double? height}) {
   return _getTextStyle(
     fontSize,
     FontWeightManager.light,
@@ -29,7 +28,7 @@ TextStyle? getLightStyle({double fontSize = FontSize.s12, Color? color, double? 
 }
 
 //regular Style
-TextStyle? getRegularStyle({double fontSize = FontSize.s12, Color? color, double? height}) {
+TextStyle? getRegularStyle({double? fontSize = FontSize.s12, Color? color, double? height}) {
   return _getTextStyle(
     fontSize,
     FontWeightManager.regular,
@@ -39,7 +38,7 @@ TextStyle? getRegularStyle({double fontSize = FontSize.s12, Color? color, double
 }
 
 //medium Style
-TextStyle? getMediumStyle({double fontSize = FontSize.s16, Color? color, double? height}) {
+TextStyle? getMediumStyle({double? fontSize = FontSize.s16, Color? color, double? height}) {
   return _getTextStyle(
     fontSize,
     FontWeightManager.medium,
@@ -49,7 +48,7 @@ TextStyle? getMediumStyle({double fontSize = FontSize.s16, Color? color, double?
 }
 
 //semi bold Style
-TextStyle? getSemiBoldStyle({double fontSize = FontSize.s16, Color? color, double? height}) {
+TextStyle? getSemiBoldStyle({double? fontSize = FontSize.s16, Color? color, double? height}) {
   return _getTextStyle(
     fontSize,
     FontWeightManager.semiBold,
@@ -59,7 +58,7 @@ TextStyle? getSemiBoldStyle({double fontSize = FontSize.s16, Color? color, doubl
 }
 
 //bold Style
-TextStyle? getBoldStyle({double fontSize = FontSize.s16, Color? color, double? height}) {
+TextStyle? getBoldStyle({double? fontSize = FontSize.s16, Color? color, double? height}) {
   return _getTextStyle(
     fontSize,
     FontWeightManager.bold,

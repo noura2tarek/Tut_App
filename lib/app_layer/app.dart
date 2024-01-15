@@ -27,8 +27,8 @@ class _MyAppState extends State<MyApp> {
       title: AppStrings.appTitle,
       theme: getAppTheme(),
       initialRoute: Routes.splashRoute,
-      //onGenerateRoute: RoutesGenerator.getRoute(RouteSettings(name: Routes.splashRoute)),
-      //onUnknownRoute: RoutesGenerator.unDefinedRoute(),
+      onGenerateRoute: RoutesGenerator.getRoute,
+      onUnknownRoute: RoutesGenerator.unDefinedRoute,
       debugShowCheckedModeBanner: false,
     );
   }

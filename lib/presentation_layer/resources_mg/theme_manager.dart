@@ -4,13 +4,14 @@ import 'color_manager.dart';
 import 'styles_manager.dart';
 import 'values_manager.dart';
 
-ThemeData getAppTheme() {
+ThemeData? getAppTheme() {
   return ThemeData(
     // main colors
     primaryColor: ColorManager.primary,
     primaryColorLight: ColorManager.lightPrimary,
     primaryColorDark: ColorManager.darkPrimary,
-    disabledColor: ColorManager.lightGrey, //grey1
+    disabledColor: ColorManager.lightGrey,
+    //grey1
     //ripple effect color
     splashColor: ColorManager.lightPrimary,
 
@@ -24,8 +25,7 @@ ThemeData getAppTheme() {
         color: ColorManager.white,
       ),
       titleTextStyle:
-          getRegularStyle(fontSize: FontSize.s16, color: ColorManager.white)
-              as TextStyle?,
+          getRegularStyle(fontSize: FontSize.s16, color: ColorManager.white),
     ),
 
     // card theme
@@ -39,12 +39,10 @@ ThemeData getAppTheme() {
     inputDecorationTheme: InputDecorationTheme(
       contentPadding: const EdgeInsets.all(AppPadding.p8),
       hintStyle:
-          getRegularStyle(fontSize: FontSize.s14, color: ColorManager.grey)
-              as TextStyle?,
+          getRegularStyle(fontSize: FontSize.s14, color: ColorManager.grey),
       labelStyle:
-          getMediumStyle(fontSize: FontSize.s14, color: ColorManager.grey)
-              as TextStyle?,
-      errorStyle: getRegularStyle(color: ColorManager.error) as TextStyle?,
+          getMediumStyle(fontSize: FontSize.s14, color: ColorManager.grey),
+      errorStyle: getRegularStyle(color: ColorManager.error),
       //enabled border style
       enabledBorder: const OutlineInputBorder(
         borderSide: BorderSide(color: ColorManager.grey, width: AppSize.s1_5),
@@ -85,7 +83,7 @@ ThemeData getAppTheme() {
       style: ElevatedButton.styleFrom(
         backgroundColor: ColorManager.primary,
         foregroundColor: ColorManager.white,
-        textStyle: getRegularStyle(fontSize: FontSize.s17) as TextStyle?,
+        textStyle: getRegularStyle(fontSize: FontSize.s17),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppSize.s11),
         ),
@@ -94,28 +92,25 @@ ThemeData getAppTheme() {
 
     // text theme
     textTheme: TextTheme(
-        headlineSmall: getRegularStyle(
-            fontSize: FontSize.s16,
-            color: ColorManager.darkGrey,
-            height: AppSize.s24) as TextStyle?,
-        titleLarge:
-            getRegularStyle(fontSize: FontSize.s14, color: ColorManager.darkGrey)
-                as TextStyle?,
-        headlineMedium:
-            getRegularStyle(fontSize: FontSize.s18, color: ColorManager.primary)
-                as TextStyle?,
-        titleSmall: getBoldStyle(fontSize: FontSize.s12, color: ColorManager.primary)
-            as TextStyle?,
-        displaySmall:
-            getRegularStyle(fontSize: FontSize.s12, color: ColorManager.grey2)
-                as TextStyle?,
-        titleMedium:
-            getRegularStyle(fontSize: FontSize.s14, color: ColorManager.grey3)
-                as TextStyle?,
-        bodyMedium:
-            getMediumStyle(fontSize: FontSize.s14, color: ColorManager.lightGrey)
-                as TextStyle?,
-        labelLarge: getRegularStyle(fontSize: FontSize.s12, color: ColorManager.grey2) as TextStyle?),
+      headlineLarge: getRegularStyle(
+          fontSize: FontSize.s16,
+          color: ColorManager.darkGrey,
+          height: AppSize.s24),
+      titleLarge:
+          getRegularStyle(fontSize: FontSize.s14, color: ColorManager.darkGrey),
+      headlineMedium:
+          getRegularStyle(fontSize: FontSize.s18, color: ColorManager.primary),
+      titleSmall:
+          getBoldStyle(fontSize: FontSize.s12, color: ColorManager.primary),
+      displaySmall:
+          getRegularStyle(fontSize: FontSize.s12, color: ColorManager.grey2),
+      titleMedium:
+          getRegularStyle(fontSize: FontSize.s14, color: ColorManager.grey3),
+      bodyMedium:
+          getMediumStyle(fontSize: FontSize.s14, color: ColorManager.lightGrey),
+      labelLarge:
+          getRegularStyle(fontSize: FontSize.s12, color: ColorManager.grey2),
+    ),
 
     //bottom navigation bar theme
   );

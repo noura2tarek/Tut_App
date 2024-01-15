@@ -50,11 +50,11 @@ class RoutesGenerator {
           builder: (context) => const StoreDetailsView(),
         );
       default:
-        return unDefinedRoute();
+        return unDefinedRoute(settings);
     }
   }
 
-  static Route<dynamic> unDefinedRoute() {
+  static Route<dynamic>? unDefinedRoute(RouteSettings? settings) {
     return MaterialPageRoute(
       builder: (context) => Scaffold(
         appBar: AppBar(
