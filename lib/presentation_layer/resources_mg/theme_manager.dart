@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:tutac_app/presentation_layer/resources_mg/fonts_manager.dart';
 import 'color_manager.dart';
 import 'styles_manager.dart';
@@ -14,13 +15,18 @@ ThemeData? getAppTheme() {
     //grey1
     //ripple effect color
     splashColor: ColorManager.lightPrimary,
-
+    scaffoldBackgroundColor: ColorManager.white,
     // app bar theme
     appBarTheme: AppBarTheme(
       centerTitle: true,
       color: ColorManager.primary,
-      elevation: AppSize.s4,
       shadowColor: ColorManager.lightPrimary,
+      systemOverlayStyle: const SystemUiOverlayStyle(
+        statusBarColor: ColorManager.primary,
+        statusBarBrightness: Brightness.light,
+        statusBarIconBrightness: Brightness.light,
+      ),
+
       iconTheme: const IconThemeData(
         color: ColorManager.white,
       ),
@@ -90,12 +96,20 @@ ThemeData? getAppTheme() {
       ),
     ),
 
+    //Text Button Theme
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        foregroundColor: ColorManager.primary,
+        textStyle: getMediumStyle(fontSize: FontSize.s16,),
+      ),
+    ),
+
     // text theme
     textTheme: TextTheme(
-      headlineLarge: getRegularStyle(
-          fontSize: FontSize.s16,
+      headlineLarge: getMediumStyle(
+          fontSize: FontSize.s18,
           color: ColorManager.darkGrey,
-          height: AppSize.s24),
+      ),
       titleLarge:
           getRegularStyle(fontSize: FontSize.s14, color: ColorManager.darkGrey),
       headlineMedium:
@@ -104,12 +118,21 @@ ThemeData? getAppTheme() {
           getBoldStyle(fontSize: FontSize.s12, color: ColorManager.primary),
       displaySmall:
           getRegularStyle(fontSize: FontSize.s12, color: ColorManager.grey2),
+      bodySmall: getMediumStyle(fontSize: FontSize.s16,),
       titleMedium:
           getRegularStyle(fontSize: FontSize.s14, color: ColorManager.grey3),
       bodyMedium:
           getMediumStyle(fontSize: FontSize.s14, color: ColorManager.lightGrey),
       labelLarge:
           getRegularStyle(fontSize: FontSize.s12, color: ColorManager.grey2),
+    ),
+    bottomSheetTheme: const BottomSheetThemeData(
+      clipBehavior: Clip.none,
+      backgroundColor: ColorManager.white,
+      elevation: AppSize.s0,
+      shape: LinearBorder(
+       side: BorderSide.none,
+      ),
     ),
 
     //bottom navigation bar theme

@@ -29,7 +29,7 @@ class AppStrings {
   static const String onBoardT1 = "SEE THE BEST COURSE #1";
   static const String onBoardT2 = "SEE THE BEST COURSE #2";
   static const String onBoardT3 = "SEE THE BEST COURSE #3";
-  static const String onBoardT4 = "SEE THE BEST COURSE";
+  static const String onBoardT4 = "SEE THE BEST COURSE #4";
   static const String onBoardSubT1 =
       'Tut app is an awesome flutter application using clean architecture #1';
   static const String onBoardSubT2 =
